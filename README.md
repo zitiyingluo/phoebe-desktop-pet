@@ -185,22 +185,6 @@ Copy-Item chat-config.example.json chat-config.json
 
 ## 开发者文档
 
-- [`DEVELOPMENT.md`](DEVELOPMENT.md) —— **35 个踩坑记录**，改代码前值得翻一遍
-  （分层窗口、`SetWindowRgn`、几何不变量、假测试的教训……）
-
-### 硬约束
-
-改这个项目时请遵守：
-
-1. **零 NuGet 依赖** —— 离线构建靠 `build.rsp` 直接调 Roslyn
-2. **脚本保持纯 ASCII**（`.ps1` / `.cmd` / `.vbs`）
-   Windows PowerShell 5.1 按 ANSI 读无 BOM 文件，中文会乱码甚至字节错位。
-   只有 `.cs` 和 `.md` 能放中文。
-3. **不要用 `Get-Content`/`Set-Content` 往返 UTF-8 源码**
-   用 `[System.IO.File]::ReadAllText/WriteAllText` + `UTF8Encoding($false)`
-4. **改代码前先停 dotnet 进程**，否则链接失败
-5. 改了渲染相关代码，要对照 `geometry-baseline.txt`
-
 ### 项目结构
 
 | 文件 | 职责 |
