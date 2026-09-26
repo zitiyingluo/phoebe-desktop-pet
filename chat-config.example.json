@@ -1,0 +1,22 @@
+{
+  "_comment": "Copy this file to chat-config.json and fill in your own ApiKey. The app also creates chat-config.json automatically (with an empty key) if it does not exist.",
+
+  "BaseUrl": "https://api.deepseek.com",
+  "ApiKey": "",
+  "Model": "deepseek-chat",
+  "Temperature": 0.8,
+  "MaxTokens": 700,
+
+  "HistoryLimit": 22,
+  "SaveHistory": true,
+  "EnableMemory": true,
+  "MemoryInterval": 6,
+  "MemoryModel": "",
+  "TokenSaver": true,
+
+  "PersonaKey": "",
+  "PersonaFile": "菲比.json",
+  "CharacterName": "",
+  "PlayerName": "",
+  "ShowInputOnStart": false
+}

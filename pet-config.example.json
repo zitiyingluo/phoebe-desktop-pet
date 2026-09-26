@@ -1,0 +1,35 @@
+{
+  "_comment": "Copy this file to pet-config.json and edit. The app also creates pet-config.json automatically with these defaults if it does not exist.",
+
+  "Size": 200,
+  "Art": null,
+  "TopMost": true,
+  "ClickThrough": false,
+  "ShowBubble": true,
+  "LogMaxKB": 1024,
+
+  "ProactiveIdle": true,
+  "IdleSeconds": 120,
+  "ProactiveCooldownSeconds": 600,
+  "ProactiveMaxPerIdle": 2,
+  "ProactiveOnSwitch": true,
+  "SwitchSettleSeconds": 6,
+
+  "WatchActivity": true,
+  "DeepWatch": false,
+  "ShotMaxEdge": 512,
+  "ShotQuality": 60,
+  "ShotOnUserMention": true,
+  "BlacklistProcess": [],
+  "BlacklistTitle": [],
+
+  "BubbleSeconds": 0,
+  "PrivacyMode": false,
+
+  "DoubleClickSound": true,
+  "SoundVolume": 80,
+  "SoundGroups": [],
+
+  "PrivacyArtSwitch": true,
+  "PrivacyArt": ""
+}

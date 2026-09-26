@@ -1,0 +1,71 @@
+# ---------------------------------------------------------------------------
+# Personal configuration -- contains the user's API key in plain text.
+# A template (chat-config.example.json) is committed instead; the app
+# creates the real file automatically on first run.
+# ---------------------------------------------------------------------------
+chat-config.json
+pet-config.json
+
+# ---------------------------------------------------------------------------
+# Runtime data -- chat history, long-term memory, usage stats and logs.
+# These are personal and must never be committed.
+# ---------------------------------------------------------------------------
+history.json
+user_memory.json
+usage.json
+pet.log
+pet.log.*
+
+# ---------------------------------------------------------------------------
+# Assets
+#
+# Only the original factory sprite (phoebe.png / phoebe@2x.png) and the single
+# "菲比啾比" sound ship with the repo. Extra artwork and the larger sound pack
+# are personal assets (AI-generated art, recorded audio) that were not cleared
+# for redistribution, so they stay local.
+#
+# The folders themselves are kept (see Art/.gitkeep, Sounds/.gitkeep) so the
+# app's scanning code still has somewhere to look.
+# ---------------------------------------------------------------------------
+Art/*
+!Art/.gitkeep
+Sounds/*/*
+!Sounds/菲比啾比/
+Sounds/菲比啾比/*
+!Sounds/菲比啾比/菲比啾比.mp3
+
+# ---------------------------------------------------------------------------
+# Development leftovers
+# ---------------------------------------------------------------------------
+_backup/
+*.webp
+*-preview.png
+geometry-baseline.txt
+source-original.*
+
+# ---------------------------------------------------------------------------
+# Build output
+#
+# The pattern is deliberately broad ("*.dll" plus "*.exe") rather than just
+# naming PhoebePet.dll. Reason: the apphost/csc steps have left stray copies
+# in this folder with a GUID prefix (e.g.
+# 1bc1e633-...._PhoebePet.dll), which a name-exact rule does not catch.
+# Nothing here needs to be committed -- build.ps1 regenerates all of it.
+# ---------------------------------------------------------------------------
+*.dll
+*.exe
+*.pdb
+PhoebePet.runtimeconfig.json
+bin/
+obj/
+*.user
+*.rsp
+
+# ---------------------------------------------------------------------------
+# OS / editor noise
+# ---------------------------------------------------------------------------
+Thumbs.db
+desktop.ini
+.vs/
+.vscode/
+*.swp
